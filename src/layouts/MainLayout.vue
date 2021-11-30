@@ -1,6 +1,11 @@
 <template>
+<<<<<<< HEAD
     <div>
         <toggle-menu/>
+=======
+    <div class="container">
+        <sidebar/>
+>>>>>>> sidebar
         <header-quipux/>
         <router-view/>
         <footer-quipux/>
@@ -8,7 +13,7 @@
 </template>
 
 <script>
-import ToggleMenu from '@/components/general/ToggleMenu'
+import Sidebar from '@/components/general/Sidebar'
 import HeaderQuipux from '@/components/general/HeaderQuipux'
 import FooterQuipux from '@/components/general/FooterQuipux'
 
@@ -17,7 +22,7 @@ export default {
     name: 'main-layout',
 
     components: {
-        ToggleMenu,
+        Sidebar,
         HeaderQuipux,
         FooterQuipux
         
