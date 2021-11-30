@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer d-flex justify-content-center">
+    <footer class="footer d-flex justify-content-center bg-light">
         <img src="@/assets/logo.png" alt="logo" @click="toHome">
     </footer>
 </template>
@@ -10,7 +10,7 @@ export default {
 
     methods: {
         toHome() {
-            this.$router.push('/')
+            this.$router.push('Home')
         }
     }
 }
