@@ -5,11 +5,8 @@
 </template>
 
 <script>
+
 export default {
-    name: 'header-quipux'
+    name: 'toggle-menu'
 }
 </script>
-
-<style scoped>
-
-</style>
