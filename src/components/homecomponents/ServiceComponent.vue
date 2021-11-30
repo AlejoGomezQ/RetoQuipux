@@ -4,9 +4,9 @@
       <div class="d-flex justify-content-center justify-content-lg-start">
         <img src="@/assets/resource-1.png" alt="resource" />
       </div>
-        <h3 class="title-aside text-center w-100">SERVICIOS QUIPUX</h3>
+        <h3 class="title-aside text-center w-100 font-weight-bold">SERVICIOS QUIPUX</h3>
     </div>
-    <div class="content-aside shadow-sm bg-white">
+    <div class="content-aside shadow-sm bg-white py-3">
       <h4 class="ml-5 mb-2">Trámites en tu mano</h4>
       <p class="ml-5">
         <small
@@ -31,10 +31,11 @@ export default {
 }
 
 .title-aside {
-  background: #ffffff83;
+  background: #ffffffdc;
   position: absolute;
-  top: 80%;
-  left: 25%;
+  top: 75%;
+  padding: 20px;
+  
 }
 
 h4 {

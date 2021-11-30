@@ -1,11 +1,11 @@
 <template>
   <div class="container-fluid bg-light">
     <div class="row">
-      <div class="col-12 col-lg-7">
+      <div class="right col-12 col-lg-7 align-self-end">
         <search-component/>
         <links-components/>
       </div>
-      <div class="col-12 col-lg-5">
+      <div class="left col-12 col-lg-5">
         <service-component/>
       </div>
     </div>
@@ -29,4 +29,5 @@ export default {
 </script>
 
 <style scoped>
+
 </style>

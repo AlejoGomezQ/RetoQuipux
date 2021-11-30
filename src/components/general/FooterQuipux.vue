@@ -1,6 +1,6 @@
 <template>
     <footer class="footer d-flex justify-content-center bg-light">
-        <img src="@/assets/logo.png" alt="logo" @click="toHome">
+        <img src="@/assets/logo-sf.png" alt="logo" @click="toHome">
     </footer>
 </template>
 
