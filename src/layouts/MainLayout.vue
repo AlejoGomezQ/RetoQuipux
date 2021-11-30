@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div>
         <toggle-menu/>
         <header-quipux/>
         <router-view/>

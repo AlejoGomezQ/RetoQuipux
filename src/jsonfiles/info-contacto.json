@@ -1,28 +1,27 @@
-[
-    {
-        "direccion": "Carrera 52 # 91-66",
-        "ciudad": "Medellín Colombia"
-    },
-    {
-        "email": "usuarioapellido@hotmail.com"
-    },
-    {
-        "sitioweb": "www.usuarioapellido.com"
-    },
-    {
-        "redsocial": [
-            "www.instagram.com/usuarioapellido",
-            "www.linkedin.com/uauarioapellido"
-        ]
-    },
-    {
-        "telefonos": [
-            {
-                "fijo": "+57 (4) 313-70-00"
-            },
-            {
-                "cel": "(312) 313-44-77"
-            }
-        ]
-    }
-]
+{
+    "direccion": [
+        "Carrera 52 # 91-66",
+        "Medellín Colombia"
+    ],
+    "email": "usuarioapellido@hotmail.com",
+    "sitioweb": "www.usuarioapellido.com",
+    
+    
+    "redsocial": [
+        "www.instagram.com/usuarioapellido",
+        "www.linkedin.com/uauarioapellido"
+    ],
+    "correspondencia": [
+        "Carrera 52 # 91-66",
+        "Envigado Colombia"
+    ],
+    "telefonos": [
+        {
+            "fijo": "+57 (4) 313-70-00"
+        },
+        {
+            "cel": "(312) 313-44-77"
+        }
+    ]
+}
+

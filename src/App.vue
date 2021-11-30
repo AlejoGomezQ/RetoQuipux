@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="ppal">
     <main-layout/>
   </div>
 </template>
@@ -15,5 +15,10 @@ export default {
 </script>
 
 <style>
-
+  main-layout {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
 </style>
