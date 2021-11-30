@@ -13,12 +13,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  main-layout {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 0;
-  }
-</style>

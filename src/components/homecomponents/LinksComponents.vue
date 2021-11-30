@@ -50,4 +50,12 @@ h5 {
 p > small {
   color: #666;
 }
+
+p {
+  height: 4em;
+}
+
+button {
+  width: 150px;
+}
 </style>
