@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid bg-light">
+  <div class="container bg-light">
     <div class="row">
       <div class="col-12 col-lg-7">
         <h1 class="question mb-4">¿Que quieres buscar?</h1>
