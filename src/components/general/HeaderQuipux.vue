@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-sm navbar-light bg-white p-0 m-0">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <template>
@@ -57,7 +57,7 @@ export default {
   name: "header-quipux",
 
   components: { 
-    Breadcrumb 
+    Breadcrumb,
     },
 };
 </script>

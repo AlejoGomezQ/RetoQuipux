@@ -61,6 +61,13 @@ a:link {
     text-decoration: none;
     color: #666;
 }
+
+a:link:hover a:link:focus {
+  font-weight: bold;
+  text-decoration: none;
+  color: #049ef4;
+  border-bottom: 3px solid #049ef4;
+}
 a {
     color: #666
 }
