@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home'
+import NombreEmpresa from '@/layouts/NombreEmpresa'
 import Empresas from '@/views/Empresas'
 import Articulos from '@/views/Articulos'
 
@@ -13,14 +14,24 @@ const routes = [
     component: Home
   },
   {
-    path: '/empresas',
-    name: 'Empresas',
-    component: Empresas
-  },
-  {
-    path: '/articulos',
-    name: 'Articulos',
-    component: Articulos
+    path: '/nombre-empresa',
+    name: 'Nombre Empresa',
+    meta: { value: 'Nombre Empresa' },
+    component: NombreEmpresa,
+    children: [
+      {
+        path: 'empresas',
+        name: 'Empresas',
+        meta: { value: 'Empresa' },
+        component: Empresas
+      },
+      {
+        path: 'articulos',
+        name: 'Articulos',
+        meta: { value: 'Articulos' },
+        component: Articulos
+      }
+    ]
   }
 ]
 

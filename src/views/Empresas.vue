@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div class="row bg-light">
     <div class="col-12 col-lg-4">
       <info-empresa/>
     </div>
