@@ -1,8 +1,8 @@
 <template>
     <div class="d-flex">
         <toggle-menu/>
-        <div class="body">
-            <header>
+        <div class="w-100">
+            <header class="d-block">
                 <header-quipux/>
             </header>
             <div class="view">
@@ -30,3 +30,6 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+</style>

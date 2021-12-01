@@ -2,12 +2,12 @@
   <div>
     <nav class="navbar navbar-expand-sm navbar-light bg-white p-0 m-0">
       <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="navbar-collapse" id="navbarNavDropdown">
           <template>
             <breadcrumb/>
           </template>
           <ul class="navbar-nav ml-auto">
-            <div class="align-middle">
+            <div class="align-self-center">
               <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -25,7 +25,7 @@
             </div>
             <li class="nav-item dropdown align-middle">
               <a
-                class="nav-link dropdown-toggle text-dark"
+                class="nav-link dropdown-toggle text-dark py-0 mt-1"
                 href="#"
                 id="navbarDropdownMenuLink"
                 role="button"
