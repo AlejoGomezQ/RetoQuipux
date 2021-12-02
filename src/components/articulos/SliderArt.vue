@@ -1,11 +1,21 @@
 <template>
-    <div>
-        <h1>Slider</h1>
+    <div v-show="imageVisible === index" class="carousel-slider">
+        <slot></slot>
     </div>
 </template>
 
 <script>
+
 export default {
-    name: 'slider-art'
+    name: 'slider-art',
+
+    props: [
+        'imageVisible',
+        'index'
+    ]
 }
 </script>
+
+<style scoped>
+
+</style>

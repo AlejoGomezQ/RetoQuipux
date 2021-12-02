@@ -1,7 +1,7 @@
 <template>
   <div class="row bg-white ml-4 mt-4 pt-5">
     <div class="col-12 col-lg-6">
-      <div class="bg-white mt-2 ml-2">
+      <div class="mt-2 ml-2">
         <h6 class="text-align-start pt-3">INFORMACIÓN DEL CONTACTO</h6>
       </div>
       <div class="right">
