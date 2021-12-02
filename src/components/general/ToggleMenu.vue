@@ -38,7 +38,7 @@
         <h6 class="text-light ml-2">ENTITIES</h6>
       </div>
       <ul class="p-0 text-center" :class="this.visibleMenu ? 'm-4' : 'm-0'">
-        <li v-show="this.visibleMenu">
+        <!-- <li v-show="this.visibleMenu">
           <dropdown
           @click="showSubMenu"
           v-for="(serv, id) in services"
@@ -46,7 +46,7 @@
           :title="serv.title"
           :item="services"
         ></dropdown>
-        </li>
+        </li> -->
         <li class="dropdown">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,16 +60,18 @@
               d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z"
             />
           </svg>
-          <span
-            id="navbarDropdown"
-            class="dropdown-toggle"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-            @click="showSubMenu"
-            v-show="this.visibleMenu"
-            >EMPRESAS</span
+          <router-link to="/nombre-empresa/empresas">
+            <span
+              id="navbarDropdown"
+              class="dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              @click="showSubMenu"
+              v-show="this.visibleMenu"
+              >EMPRESAS</span
+            ></router-link
           >
           <div
             class="dropdown-menu dropdown-menu-end"
@@ -94,17 +96,19 @@
               d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"
             />
           </svg>
-          <span
-            id="navbarDropdown"
-            class="dropdown-toggle"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-            @click="showSubMenu"
-            v-show="this.visibleMenu"
-            >ARTICULOS</span
-          >
+          <router-link to="/nombre-empresa/articulos">
+            <span
+              id="navbarDropdown"
+              class="dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              @click="showSubMenu"
+              v-show="this.visibleMenu"
+              >ARTICULOS</span
+            >
+          </router-link>
           <div
             class="dropdown-menu dropdown-menu-end"
             aria-labelledby="navbarDropdown"
@@ -169,7 +173,7 @@ export default {
           subItem: [
             {
               title: "Empresa",
-              link: "/empresas",
+              link: "nombre-empresa/empresas",
             },
           ],
         },
@@ -178,7 +182,7 @@ export default {
           subItem: [
             {
               title: "Articulo",
-              link: "/articulos",
+              link: "nombre-empresa/articulos",
             },
           ],
         },
@@ -232,6 +236,7 @@ export default {
 
 li {
   list-style: none;
+  margin-top: 30px;
 }
 
 li > span {
@@ -241,6 +246,16 @@ li > span {
 li > svg {
   margin: 0;
   padding: 0;
-  margin-top: 30px;
+  margin-right: 10px;
 }
+
+a, a:link, a:focus, a:hover {
+  text-decoration: none;
+  color: #ddd
+}
+
+.dropdown-toggle::after {
+  margin-left: 15px;
+}
+
 </style>

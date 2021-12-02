@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid ml-4 bg-light">
+  <div class="ml-4 bg-light">
     <div class="row">
       <div class="col-12 col-lg-4">
         <div class="mt-2 ml-2">
@@ -40,9 +40,9 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-8 w-100">
-          <div>
-            <carousel @next="next" @previous="previous">
+      <div class="col-12 col-lg-8 mt-5">
+          <div class="text-center">
+            <carousel @next="next" @previous="previous" class="carousel">
               <slider-art
                 v-for="(item, index) in this.item.default"
                 :key="index"
@@ -129,5 +129,14 @@ p {
 .items {
   height: 300px;
   overflow-y: scroll;
+}
+
+.carousel {
+  margin: 0 auto;
+}
+
+img {
+  border-radius: 15%;
+  border: solid 6px #aaa;
 }
 </style>

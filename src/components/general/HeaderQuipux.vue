@@ -3,8 +3,9 @@
     <nav class="navbar navbar-expand-sm navbar-light bg-white p-0 m-0">
       <div class="container-fluid">
         <div class="navbar-collapse" id="navbarNavDropdown">
+          <img src="@/assets/logo-sf.png" alt="logo" v-show="$route.name === 'Home'">
           <template>
-            <breadcrumb/>
+            <breadcrumb v-show="$route.name != 'Home'"/>
           </template>
           <ul class="navbar-nav ml-auto">
             <div class="align-self-center">
