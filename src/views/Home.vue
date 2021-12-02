@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid bg-light">
     <div class="row">
-      <div class="col-12 col-lg-7 align-self-end">
+      <div class=" left col-12 col-lg-7 align-self-end">
         <search-component/>
         <links-components/>
       </div>
@@ -29,5 +29,8 @@ export default {
 </script>
 
 <style scoped>
-
+.col-12 {
+  padding: 80px;
+  padding-top: 0;
+}
 </style>

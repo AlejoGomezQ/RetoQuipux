@@ -17,7 +17,7 @@
               /></svg
           ></a>
         </li>
-        <li class="breadcrumb-item" v-for="item in items" :key="item.path">
+        <li class="breadcrumb-item last-page" v-for="item in items" :key="item.path">
           <a :href="item.path">{{ item.meta.value }}</a>
         </li>
       </ol>
@@ -62,12 +62,6 @@ a:link {
     color: #666;
 }
 
-a:link:hover a:link:focus {
-  font-weight: bold;
-  text-decoration: none;
-  color: #049ef4;
-  border-bottom: 3px solid #049ef4;
-}
 a {
     color: #666
 }
@@ -75,4 +69,5 @@ a {
 ol{
     background: transparent;
 }
+
 </style>

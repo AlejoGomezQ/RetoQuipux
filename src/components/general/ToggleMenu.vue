@@ -197,12 +197,10 @@ export default {
   methods: {
     showToggleMenu() {
       this.visibleMenu = !this.visibleMenu;
-      console.log(this.visibleMenu);
     },
 
     showSubMenu() {
       this.visibleSubMenu = !this.visibleSubMenu;
-      console.log(this.visibleSubMenu);
     },
   },
 };

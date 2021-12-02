@@ -1,7 +1,7 @@
 <template>
-  <div class="ml-4 bg-light">
-    <div class="row">
-      <div class="col-12 col-lg-4">
+  <div class="ml-4">
+    <div class="row w-100">
+      <div class="col-12 col-lg-4 bg-light">
         <div class="mt-2 ml-2">
           <h6 class="text-align-start pt-3">INFORMACIÓN DEL CONTACTO</h6>
         </div>
@@ -40,8 +40,8 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-8 mt-5">
-          <div class="text-center">
+      <div class="col-12 col-lg-8 bg-light">
+          <div class="text-center mt-5">
             <carousel @next="next" @previous="previous" class="carousel">
               <slider-art
                 v-for="(item, index) in this.item.default"
@@ -53,7 +53,7 @@
               </slider-art>
             </carousel>
           </div>
-          <div class="items d-flex flex-wrap m-0 p-0">
+          <div class="items d-flex flex-wrap m-0 p-0 text-center bg-light">
             <div v-for="art in this.item.default" :key="art.id" class="item col-6 col-sm-3 col-md-4 col-lg-3">
               <articles
                 :image="art.imagen"
@@ -138,5 +138,9 @@ p {
 img {
   border-radius: 15%;
   border: solid 6px #aaa;
+}
+
+.col-12 {
+  border: 15px solid #fff;
 }
 </style>
