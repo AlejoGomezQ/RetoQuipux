@@ -1,5 +1,5 @@
 <template>
-  <div class="m-5bg-light">
+  <div class="container-fluid ml-4 bg-light">
     <div class="row">
       <div class="col-12 col-lg-4">
         <div class="mt-2 ml-2">
@@ -40,9 +40,8 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-8">
-        <div class="row">
-          <div class="col-12">
+      <div class="col-12 col-lg-8 w-100">
+          <div>
             <carousel @next="next" @previous="previous">
               <slider-art
                 v-for="(item, index) in this.item.default"
@@ -50,14 +49,19 @@
                 :index="index"
                 :imageVisible="imageVisible"
               >
-                <img :src="item.imagen" :alt="item.titulo"/>
+                <img :src="item.imagen" :alt="item.titulo" />
               </slider-art>
             </carousel>
           </div>
-          <div class="col-12">
-            <articles />
+          <div class="items d-flex flex-wrap m-0 p-0">
+            <div v-for="art in this.item.default" :key="art.id" class="item col-6 col-sm-3 col-md-4 col-lg-3">
+              <articles
+                :image="art.imagen"
+                :title="art.titulo"
+                :description="art.descripcion"
+              />
+            </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -120,5 +124,10 @@ p {
   font-family: sans-serif;
   font-size: 13px;
   line-height: 60%;
+}
+
+.items {
+  height: 300px;
+  overflow-y: scroll;
 }
 </style>

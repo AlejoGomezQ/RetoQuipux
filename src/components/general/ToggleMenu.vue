@@ -2,31 +2,51 @@
   <div :class="this.visibleMenu ? 'wrapper' : 'no-wrapper'">
     <div class="sidebar-wrapper border-end">
       <div class="sidebar-heading">
-        <button class="sidebar-toggle btn p-0 m-0 text-center" @click="showToggleMenu">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-list text-white"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-              />
-            </svg>
-          </button>
+        <button
+          class="sidebar-toggle btn p-0 m-0 text-center"
+          @click="showToggleMenu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-list text-white"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
         <router-link to="/">
-          <img src="@/assets/logo-wh.png" alt="logo" class="w-50 ml-4" v-show="this.visibleMenu"/>
+          <img
+            src="@/assets/logo-wh.png"
+            alt="logo"
+            class="w-50 ml-4"
+            v-show="this.visibleMenu"
+          />
         </router-link>
       </div>
     </div>
     <div class="list-group list-group-flush">
-      <div class="p-2 border-bottom" v-show="!this.visibleSubMenu && this.visibleMenu">
+      <div
+        class="p-2 border-bottom"
+        v-show="!this.visibleSubMenu && this.visibleMenu"
+      >
         <h6 class="text-light ml-2">ENTITIES</h6>
       </div>
       <ul class="p-0 text-center" :class="this.visibleMenu ? 'm-4' : 'm-0'">
+        <li v-show="this.visibleMenu">
+          <dropdown
+          @click="showSubMenu"
+          v-for="(serv, id) in services"
+          :key="id"
+          :title="serv.title"
+          :item="services"
+        ></dropdown>
+        </li>
         <li class="dropdown">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +133,6 @@
             aria-haspopup="true"
             aria-expanded="false"
             @click="showSubMenu"
-            
             >COLABORADORES</span
           >
           <div
@@ -129,27 +148,59 @@
 </template>
 
 <script>
+import Dropdown from "./Dropdown";
+
 export default {
   name: "toggle-menu",
+
+  components: {
+    Dropdown,
+  },
 
   data() {
     return {
       visibleMenu: false,
-      visibleSubMenu: false
-    }
+
+      visibleSubMenu: false,
+
+      services: [
+        {
+          title: "EMPRESAS",
+          subItem: [
+            {
+              title: "Empresa",
+              link: "/empresas",
+            },
+          ],
+        },
+        {
+          title: "ARTICULOS",
+          subItem: [
+            {
+              title: "Articulo",
+              link: "/articulos",
+            },
+          ],
+        },
+        {
+          title: "COLABORADORES",
+          link: "#",
+        },
+      ],
+    };
   },
 
   methods: {
     showToggleMenu() {
-      this.visibleMenu = !this.visibleMenu
-      console.log(this.visibleMenu)
+      this.visibleMenu = !this.visibleMenu;
+      console.log(this.visibleMenu);
     },
 
     showSubMenu() {
-      this.visibleSubMenu = !this.visibleSubMenu
-      console.log(this.visibleSubMenu)
-    }
-  }
+      this.visibleSubMenu = !this.visibleSubMenu;
+      console.log(this.visibleSubMenu);
+    },
+  },
 };
 </script>
 
@@ -159,12 +210,14 @@ export default {
   height: auto;
   background: #302634;
   z-index: 10;
+  transition: 0.2s;
 }
 
 .no-wrapper {
   width: 4rem;
   background: #302634;
   z-index: 10;
+  transition: 0.2s;
 }
 
 .sidebar-wrapper .sidebar-heading {
